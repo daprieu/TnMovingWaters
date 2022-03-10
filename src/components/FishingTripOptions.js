@@ -29,7 +29,7 @@ const FishingTripOptions = () => {
                 
             </Col>
             <Col>
-            <img  src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646355617/TNMW/20200428_210805_ewhmi4.webp"/>
+            <img  src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646355617/TNMW/20200428_210805_ewhmi4.webp" alt="Smallmouth wading and kayak trips"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -47,7 +47,7 @@ const FishingTripOptions = () => {
                 <p>Boat trips $400 for 2 people(4-5hrs) $500(8+hrs) additional people can be added for $100 each.</p>
             </Col>
             <Col>
-            <img  src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646355527/TNMW/tnmw4_pcbwkk.webp"/>
+            <img  src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646355527/TNMW/tnmw4_pcbwkk.webp" alt="Musky boat and kayak trips"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -59,7 +59,7 @@ const FishingTripOptions = () => {
                 <p>$400 for 2 people $100 for each additional person.</p>
             </Col>
             <Col>
-            <img src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646699561/TNMW/Screenshot_2022-03-07_183207_nmxe7n.webp"/>
+            <img src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646699561/TNMW/Screenshot_2022-03-07_183207_nmxe7n.webp" alt="Brown Trout boat and kayak trips"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -74,7 +74,7 @@ const FishingTripOptions = () => {
                 </p>
             </Col>
             <Col>
-            <img src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646355617/TNMW/20170818_214019_z7hlv4.webp"/>
+            <img src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646355617/TNMW/20170818_214019_z7hlv4.webp" alt="River striper"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -88,7 +88,7 @@ const FishingTripOptions = () => {
                 </p>
             </Col>
             <Col>
-            <img src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646699751/TNMW/Screenshot_2022-03-07_183539_tbo5jq.webp"/>
+            <img src="https://res.cloudinary.com/myclutch/image/upload/f_webp/v1646699751/TNMW/Screenshot_2022-03-07_183539_tbo5jq.webp" alt="combo trips"/>
             </Col>
         </Row>
         <p className='bodyText'>

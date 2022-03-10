@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import './Home.css'
 
 
@@ -9,7 +9,7 @@ const Home = () => {
       
         <div className='siteBanner'>
 
-        <video className='video' src="https://res.cloudinary.com/myclutch/video/upload/v1646775470/TNMW/2022-03-08_15-32-52_Trim_twsy8q.mp4" autoPlay muted loop style={{width: '100%'}}></video>
+        <video className='video' src="https://res.cloudinary.com/myclutch/video/upload/v1646775470/TNMW/2022-03-08_15-32-52_Trim_twsy8q.mp4" alt="" autoPlay muted loop style={{width: '100%'}}></video>
         <div className='videoText'><h1>Welcome To<br/>Tennessee Moving Waters<br/>Guide Service</h1></div>
         </div>
       <Container className="homeContainer" >
@@ -46,7 +46,7 @@ const Home = () => {
             <Col >
             
 
-            <img src="https://res.cloudinary.com/myclutch/image/upload/c_scale,f_webp,w_500/v1646355527/TNMW/tnmw1_srrvr6.jpg" />
+            <img src="https://res.cloudinary.com/myclutch/image/upload/c_scale,f_webp,w_500/v1646355527/TNMW/tnmw1_srrvr6.jpg" alt="musky" />
             
             </Col>
         </Row>
