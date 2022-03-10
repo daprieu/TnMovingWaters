@@ -1,0 +1,31 @@
+
+.fishingTrips {
+    margin: 1em;
+    padding: 2em;
+    text-align: left;  
+    border-radius: .5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fishingTrips img {
+    display: flex;
+    width: 100%; 
+    margin: auto;
+   
+}
+.bodyText{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@media only screen and (max-width: 600px) {
+    .fishingTrips {
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+  }

@@ -1,0 +1,64 @@
+.siteBanner{
+    margin-bottom: 1em;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    
+    
+}
+.video{
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    bottom: -100%;
+    top: -100%;
+    left: -100%;
+    object-fit: cover;
+    z-index: -1;
+    
+    filter: brightness(50%);
+}
+.videoText{
+    
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeRow{
+    margin: 1em;
+    padding: 2em;
+    text-align: left;  
+    border-radius: .5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.homeRow img{
+        display: flex;
+        width: 100%; 
+        margin: auto;
+       
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .homeRow {
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+  }

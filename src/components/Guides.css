@@ -1,0 +1,15 @@
+
+.guideCard{
+      width: 40vw;
+}
+@media only screen and (max-width: 600px) {
+    .guidesContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+    .guideCard{
+        width: auto;
+}
+}
