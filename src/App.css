@@ -1,6 +1,7 @@
 
 .App {
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-logo {
@@ -8,6 +9,12 @@
   pointer-events: none;
 }
 
+p{
+  font-size: 3vw;
+}
+h1 h2 h3 h4{
+  font-weight:bold;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
