@@ -1,6 +1,6 @@
 import React from 'react'
 import "./NavBar.css"
-import bootstrap from 'bootstrap'
+
 import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap'
 
 export const MWNavBar = () => {
