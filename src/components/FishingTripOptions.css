@@ -17,6 +17,10 @@
     padding-left: 3em;
     padding-right: 3em;
 }
+.fishingTrips h2{
+    font-size: 2.2em;
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 600px) {
     .fishingTrips {

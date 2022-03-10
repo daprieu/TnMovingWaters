@@ -9,9 +9,9 @@ const Footer = () => {
             <div>125 Sunnymeade Dr, Mt. Juliet, TN 37122</div>
             <div>Phone: (615) 506-2951</div>
             <div className='links'>
-            <a href="https://www.instagram.com/tnmovingwaters/?hl=en"><BsInstagram /></a>
-            <a href="https://www.facebook.com/tnmovingwatersguideservice/"><BsFacebook /></a>
-            <a href="https://www.youtube.com/channel/UCr3wIjfwL74OWshmIRkfevg"><BsYoutube /></a>
+            <a href="https://www.instagram.com/tnmovingwaters/?hl=en" aria-label="Add us on Instagram"><BsInstagram /></a>
+            <a href="https://www.facebook.com/tnmovingwatersguideservice/" aria-label="Add us on facebook"><BsFacebook /></a>
+            <a href="https://www.youtube.com/channel/UCr3wIjfwL74OWshmIRkfevg" aria-label="Subscribe to our youtube channel"><BsYoutube /></a>
             </div>
         </div>
         

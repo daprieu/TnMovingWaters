@@ -29,13 +29,14 @@
     color: white;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items:flex-start;
+    margin-top: 1em;
     justify-content: center;
     font-weight: 700;
 }
 .videoText h1{
     font-weight: 700;
-    
+    font-size: 3em;
 }
 
 .homeRow{
@@ -44,7 +45,7 @@
     text-align: left;  
     border-radius: .5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: 1.5em;
+    
 }
 
 .homeRow img{

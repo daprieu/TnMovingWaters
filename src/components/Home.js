@@ -34,6 +34,7 @@ const Home = () => {
         </Row> */}
         <Row className="homeRow" >
             <Col >
+            <p>
             We believe in taking  a different approach to a guided fishing trip. 
             We like to get away from the crowds and let you see what Tennessee truly has to offer.
             Take a trip with us off the beaten path and explore small rivers/streams that rarely see other anglers,
@@ -42,6 +43,7 @@ const Home = () => {
             We offer many different trips for a variety of species including wading for smallmouth bass and kayak trips
             for smallmouth, musky, and brown trout. We also offer boat trips for musky and smallmouth on the larger waters.
             Our guides are professional and strive to give you the best experience possible.
+            </p>
             </Col>
             <Col >
             
