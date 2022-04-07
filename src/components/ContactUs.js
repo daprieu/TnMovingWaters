@@ -1,5 +1,5 @@
 import React from 'react'
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 import { Button, Container, Form, Row, Col} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './ContactUs.css'
