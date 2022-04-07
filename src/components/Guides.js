@@ -2,10 +2,15 @@ import React from 'react'
 import { Row } from 'react-bootstrap'
 import { Card, Container } from 'react-bootstrap'
 import './Guides.css'
+import {Helmet} from 'react-helmet'
+
 const Guides = () => {
   return (
       <>
-      
+        <Helmet>
+            <title>Tennessee Moving Waters Guides</title>
+            <meta name="Our Fishing Guides" content="Meet the our fishing guides. J.G. and Nick now everything there is to finding the largest and strongest fish that are sure to put up a fight. Between cast they may share some Tennessee knowledge with you too!" />
+        </Helmet>
       <Container className="py-3">
       <h1>Guides</h1>
       <Row className='guidesContainer d-flex justify-content-center justify-content-around'>

@@ -1,12 +1,15 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Home.css'
-
+import {Helmet} from 'react-helmet'
 
 const Home = () => {
   return (
       <>
-      
+        <Helmet>
+    <title>Welcome to Tennessee Moving Waters</title>
+    <meta name="Tennessee Moving Waters Home Page" content="A Middle Tennesse Fishing Guide service where we love to find big fish in smaller waters. We enjoy nature and the peace that comes with it, that is until we get one on the line and then we go crazy. It is an adrenaline rush hooking some of the fish we find. Take a look and give us a shout!" />
+  </Helmet>
         <div className='siteBanner'>
 
         <video className='video' src="https://res.cloudinary.com/alexprieuweb/video/upload/v1646775470/TNMW/2022-03-08_15-32-52_Trim_twsy8q.mp4" alt="" autoPlay muted loop style={{width: '100%'}}></video>

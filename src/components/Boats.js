@@ -1,10 +1,15 @@
 import React from 'react'
 import {Container, Row, Col } from 'react-bootstrap'
+import {Helmet} from 'react-helmet'
 import './Boats.css'
 
 const Boats = () => {
   return (
       <>
+    <Helmet>
+    <title>Tennessee Moving Waters Boats</title>
+    <meta name="Our Boats" content="Availble boats to use in our selected guide services." />
+  </Helmet>
     <Container className='py-3 '>
     <h1>Our Boats</h1>
         <Row className='boats'>
