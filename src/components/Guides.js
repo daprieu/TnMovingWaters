@@ -1,13 +1,16 @@
 import React from 'react'
+import { Row } from 'react-bootstrap'
 import { Card, Container } from 'react-bootstrap'
 import './Guides.css'
 const Guides = () => {
   return (
       <>
+      
+      <Container className="py-3">
       <h1>Guides</h1>
-      <Container className="guidesContainer d-flex justify-content-center justify-content-around">
+      <Row className='guidesContainer d-flex justify-content-center justify-content-around'>
         <Card className='guideCard'>
-            <Card.Img style={{padding: '.5em'}} variant="top" src="https://res.cloudinary.com/myclutch/image/upload/c_scale,f_webp,w_600/v1646697339/TNMW/Screenshot_2022-03-07_175528_vabhm3.webp" />
+            <Card.Img style={{padding: '.5em'}} variant="top" src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646697339/TNMW/Screenshot_2022-03-07_175528_vabhm3.webp" />
                 <Card.Body>
                     <Card.Title>Nick Adams</Card.Title>
                     <Card.Text>
@@ -19,7 +22,7 @@ const Guides = () => {
             </Card>
 
             <Card className='guideCard'>
-                <Card.Img style={{padding: '.5em'}} variant="top" src="https://res.cloudinary.com/myclutch/image/upload/c_scale,f_webp,w_600/v1646697636/TNMW/Screenshot_2022-03-07_180025_bjhmjs.webp" />
+                <Card.Img style={{padding: '.5em'}} variant="top" src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646697636/TNMW/Screenshot_2022-03-07_180025_bjhmjs.webp" />
                     <Card.Body>
                         <Card.Title>J.G. Auman</Card.Title>
                         <Card.Text>
@@ -28,6 +31,7 @@ const Guides = () => {
                         </Card.Text>
                     </Card.Body>
             </Card>
+            </Row>
         </Container>
       </>
   )

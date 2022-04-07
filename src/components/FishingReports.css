@@ -1,0 +1,27 @@
+.reportImages{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    
+
+}
+.reportImages img{
+   width: 300px;
+   
+   
+}
+.facebookIFrame{
+    width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .facebookIFrame{
+        width: 275px;
+    }
+    .reportImages img{
+        width: 275px;
+        
+        
+     }
+  }
