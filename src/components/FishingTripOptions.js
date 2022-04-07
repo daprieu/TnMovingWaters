@@ -1,10 +1,15 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import "./FishingTripOptions.css"
+import {Helmet} from 'react-helmet'
 
 const FishingTripOptions = () => {
   return (
       <>
+        <Helmet>
+            <title>Fishing Trip Options</title>
+            <meta name="Fishign Trip Options" content="We have a variety of fishing guide options, take a look to see what we offer." />
+        </Helmet>
         <Container className='py-3 '>
         <h1>FISHING TRIPS</h1>
         <p className='bodyText'>

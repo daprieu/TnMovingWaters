@@ -2,10 +2,11 @@ import React from 'react'
 import { useForm } from '@formspree/react';
 import { Button, Container, Form, Row, Col} from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import {Helmet} from 'react-helmet'
 import './ContactUs.css'
 
 const ContactUs = () => {
-  const [state, handleSubmit] = useForm("xeqnjpkv");
+  const [state, handleSubmit] = useForm("xeqnrjee");
   if (state.succeeded) {
       return (
         <Container className='py-3 contact'>
@@ -14,6 +15,11 @@ const ContactUs = () => {
       );
   }
   return (
+    <>
+      <Helmet>
+    <title>Contact Us!</title>
+    <meta name="Contact information page" content="If you would like to learn more or have any questions abour our fishing guide services, contact us anytime!" />
+  </Helmet>
     <Container className='py-3 contact'>
       <h1>Contact Us</h1>
       <div className='d-flex flex-column pb-5 ' style={{fontSize: "1.25em"}}>
@@ -79,6 +85,7 @@ const ContactUs = () => {
 
     </Row>
     </Container>
+    </>
   );
 }
 
