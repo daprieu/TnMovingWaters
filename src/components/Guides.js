@@ -26,7 +26,7 @@ const Guides = () => {
                     <Card.Body>
                         <Card.Title>J.G. Auman</Card.Title>
                         <Card.Text>
-                        J.G. is a biologist and the head of aquatics at the Nashville Zoo. He has spent countless hours in Tennessee's rivers and streams doing field work, 
+                        J.G. is a biologist and the Life Support Systems Manager at the Nashville Zoo. He has spent countless hours in Tennessee's rivers and streams doing field work, 
                         and of course, fishing. He is involved with projects working with endangered crayfish and hellbenders. 
                         </Card.Text>
                     </Card.Body>
