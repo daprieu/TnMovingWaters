@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      
         <TnMovingWatersViews/>
+        
       </BrowserRouter>
       
     </div>

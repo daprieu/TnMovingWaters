@@ -5,17 +5,20 @@
     text-align: left;  
     border-radius: .5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: .75em;
 }
 
 .fishingTrips img {
     display: flex;
-    width: 100%; 
+    width: 80%; 
     margin: auto;
    
 }
 .bodyText{
     padding-left: 3em;
     padding-right: 3em;
+    font-size: 1.25em;
+    
 }
 .fishingTrips h2{
     font-size: 2.2em;
