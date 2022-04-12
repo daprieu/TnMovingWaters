@@ -10,6 +10,15 @@ const Guides = () => {
         <Helmet>
             <title>Tennessee Moving Waters Guides</title>
             <meta name="Our Fishing Guides" content="Meet the our fishing guides. J.G. and Nick now everything there is to finding the largest and strongest fish that are sure to put up a fight. Between cast they may share some Tennessee knowledge with you too!" />
+            {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"></script>
+            <script>
+            {` window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-G85YFC6WJT');`}
+            </script>
         </Helmet>
       <Container className="py-3">
       <h1>Guides</h1>

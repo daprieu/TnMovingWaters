@@ -9,6 +9,15 @@ const Boats = () => {
     <Helmet>
     <title>Tennessee Moving Waters Boats</title>
     <meta name="Our Boats" content="Availble boats to use in our selected guide services." />
+    {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"></script>
+    <script>
+    {` window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G85YFC6WJT');`}
+    </script>
   </Helmet>
     <Container className='py-3 '>
     <h1>Our Boats</h1>
