@@ -8,6 +8,7 @@ import Footer from './Footer'
 import Guides from './Guides'
 import Home from './Home'
 import { MWNavBar } from './NavBar'
+import Sponsors from './Sponsors'
 
 const TnMovingWatersViews = () => {
   return (
@@ -24,7 +25,7 @@ const TnMovingWatersViews = () => {
   <Route path="/contact-us" element={<ContactUs />} />
   
   </Routes>
- 
+  <Sponsors/>
   <Footer/>
   </div>
   </>
