@@ -19,6 +19,15 @@ const ContactUs = () => {
       <Helmet>
     <title>Contact Us!</title>
     <meta name="Contact information page" content="If you would like to learn more or have any questions abour our fishing guide services, contact us anytime!" />
+    {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"></script>
+    <script>
+    {` window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G85YFC6WJT');`}
+    </script>
   </Helmet>
     <Container className='py-3 contact'>
       <h1>Contact Us</h1>

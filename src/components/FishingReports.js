@@ -9,6 +9,15 @@ const FishingReports = () => {
     <Helmet>
     <title>Take a look at some of our Fishing Reports!</title>
     <meta name="fishing reports" content="Fishing reports from our guide trips." />
+    {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"></script>
+    <script>
+    {` window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G85YFC6WJT');`}
+    </script>
   </Helmet>
     <Container>
       <h1>FishingReports</h1>

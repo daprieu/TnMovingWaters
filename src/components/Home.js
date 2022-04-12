@@ -9,6 +9,15 @@ const Home = () => {
         <Helmet>
     <title>Welcome to Tennessee Moving Waters</title>
     <meta name="Tennessee Moving Waters Home Page" content="A Middle Tennesse Fishing Guide service where we love to find big fish in smaller waters. We enjoy nature and the peace that comes with it, that is until we get one on the line and then we go crazy. It is an adrenaline rush hooking some of the fish we find. Take a look and give us a shout!" />
+    {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"></script>
+    <script>
+    {` window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G85YFC6WJT');`}
+    </script>
   </Helmet>
         <div className='siteBanner'>
 
