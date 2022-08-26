@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router'
 import Boats from './Boats'
 import ContactUs from './ContactUs'
-import FishingReports from './FishingReports'
+// import FishingReports from './FishingReports'
 import FishingTripOptions from './FishingTripOptions'
 import Footer from './Footer'
 import Guides from './Guides'
@@ -19,7 +19,7 @@ const TnMovingWatersViews = () => {
   
   <Route path="/" element={<Home />} />
   <Route path="/fishing-trip-options" element={<FishingTripOptions />} />
-  <Route path="/fishing-reports" element={<FishingReports />} />
+  {/* <Route path="/fishing-reports" element={<FishingReports />} /> */}
   <Route path="/boats" element={<Boats />} />
   <Route path="/guides" element={<Guides />} />
   <Route path="/contact-us" element={<ContactUs />} />

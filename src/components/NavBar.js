@@ -33,7 +33,7 @@ export const MWNavBar = () => {
             <Nav fill className="linktext" >
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/fishing-trip-options">Fishing Trip Options</Nav.Link>
-            <Nav.Link href="/fishing-reports">Fishing Reports</Nav.Link>
+            {/* <Nav.Link href="/fishing-reports">Fishing Reports</Nav.Link> */}
             <Nav.Link href="/boats">Boats</Nav.Link>
             <Nav.Link href="/guides">Guides</Nav.Link>              
             <Nav.Link className="text-right" href="/contact-us">Contact Us</Nav.Link>
