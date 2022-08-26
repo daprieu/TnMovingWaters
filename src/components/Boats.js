@@ -23,7 +23,7 @@ const Boats = () => {
     <h1>Our Boats</h1>
         <Row className='boats'>
             <Col>
-                <h2>Johnboat</h2>
+                <h2>Jonboat</h2>
                 <p >
                 2021 G3 1860 Center console tunnel hull with 80hp jet outboard
                 </p>
@@ -42,18 +42,6 @@ const Boats = () => {
             </Col>
             <Col>
             <img  src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646698031/TNMW/b2_bnjjgb.webp" alt="kayaks"/>
-            </Col>
-        </Row>
-        <Row className='boats'>
-            <Col>
-                <h2>Jet Boat</h2>
-                <p>
-                115/80 hp Yamaha outboard jet
-                </p>
-                
-            </Col>
-            <Col>
-            <img src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646698031/TNMW/b3_jbdqcy.webp" alt="jet boat"/>
             </Col>
         </Row>
         </Container>

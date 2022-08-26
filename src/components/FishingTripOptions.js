@@ -51,8 +51,8 @@ const FishingTripOptions = () => {
                 <h2>Musky boat & kayak trips</h2>
                 <p>
                 If you think you are ready to battle one of the strongest fish swimming in fresh water, then the mighty muskellunge awaits. We chase these awesome beasts in some 
-                of the most beautiful areas in Tennessee. We fish out of a 2021 G3 18ft jet-powered johnboat on the larger portions of the Caney Fork and Collins Rivers but love to 
-                take the kayaks up into the skinny water. It is an amazing experience fighting these awesome fish out of a kayak, but not for the faint of heart.  Boat trips $400 for 2 people(4-5hrs) $500(8+hrs) additional people can be added for $100 each
+                of the most beautiful areas in Tennessee. We fish out of a 2021 G3 18ft jet-powered jonboat on the larger portions of the Caney Fork and Collins Rivers but love to 
+                take the kayaks up into the skinny water. It is an amazing experience fighting these awesome fish out of a kayak, but not for the faint of heart.  
                 </p>
                 <p>
                 Kayak trips $500 for 
@@ -84,7 +84,7 @@ const FishingTripOptions = () => {
                 of the dark, this is something you've got to try. 
                 </p>
                 <p>
-                    $300 for 2 people(4-5hrs) $100 each additional person. You will need bring your own waders.
+                    $300 for 2 people(4-5hrs) $100 each additional person. You will need to bring your own waders.
                 </p>
             </Col>
             <Col>
