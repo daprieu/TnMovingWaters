@@ -9,6 +9,7 @@ import Guides from './Guides'
 import Home from './Home'
 import { MWNavBar } from './NavBar'
 import Sponsors from './Sponsors'
+import Test from './Test'
 
 const TnMovingWatersViews = () => {
   return (
@@ -22,6 +23,7 @@ const TnMovingWatersViews = () => {
   {/* <Route path="/fishing-reports" element={<FishingReports />} /> */}
   <Route path="/boats" element={<Boats />} />
   <Route path="/guides" element={<Guides />} />
+  <Route path="/test" element={<Test/>}/>
   <Route path="/contact-us" element={<ContactUs />} />
   
   </Routes>
