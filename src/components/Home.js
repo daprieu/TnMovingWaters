@@ -9,6 +9,7 @@ const Home = () => {
         <Helmet>
     <title>Welcome to Tennessee Moving Waters</title>
     <meta name="Tennessee Moving Waters Home Page" content="A Middle Tennesse Fishing Guide service where we love to find big fish in smaller waters. We enjoy nature and the peace that comes with it, that is until we get one on the line and then we go crazy. It is an adrenaline rush hooking some of the fish we find. Take a look and give us a shout!" />
+    <link rel="icon" type="image/png" href="https://images.prismic.io/alexprieu/b90cd64d-87b3-4646-a5aa-816b55d67013_Frame+2+%281%29.png?auto=compress,format" sizes="64x64" />
     {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"></script>
     <script>
@@ -27,7 +28,7 @@ const Home = () => {
       <Container className="homeContainer" >
       <Row className='homeRow'>
           <Col>
-          <img className='noDumping' alt=''  src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1649363972/TNMW/Home%20page%20pics/Screenshot_2022-04-07_160753_j9z51b.webp'/>
+          <img className='noDumping' alt='noDumping'  src='https://images.prismic.io/alexprieu/ee1dac01-a91c-4f52-89eb-200412947ce9_Screenshot_2022-04-07_160753_j9z51b+%281%29.png?auto=compress,format'/>
           </Col>
           </Row>
         <Row className="homeRow" >
