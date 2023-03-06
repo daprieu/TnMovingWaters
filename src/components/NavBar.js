@@ -14,7 +14,7 @@ export const MWNavBar = () => {
         <Navbar.Brand href="/" className="d-flex flex-column align-items-center"  >
                 <img
                 alt="Tennessee Moving Waters Logo"
-                src="https://res.cloudinary.com/alexprieuweb/image/upload/f_webp/v1646927504/TNMW/TNMW_stkaoa.webp"
+                src="https://images.prismic.io/alexprieu/49f0dd6b-a29f-4ebd-975e-1da11d738b70_TNMW_stkaoa.png?auto=compress,format"
                 style={{width: '120px'}}
                 width={120}
                 height={27.9167}

@@ -21,13 +21,13 @@ const Home = () => {
   </Helmet>
         <div className='siteBanner'>
 
-        <video className='video' src="https://res.cloudinary.com/alexprieuweb/video/upload/v1646775470/TNMW/2022-03-08_15-32-52_Trim_twsy8q.mp4" alt="" autoPlay muted loop style={{width: '100%'}}></video>
+        
         <div className='videoText'><h1>Welcome To<br/>Tennessee Moving Waters<br/>Guide Service</h1></div>
         </div>
       <Container className="homeContainer" >
       <Row className='homeRow'>
           <Col>
-          <img className='noDumping' alt=''  src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1649363972/TNMW/Home%20page%20pics/Screenshot_2022-04-07_160753_j9z51b.webp'/>
+          <img className='noDumping' alt=''  src='https://images.prismic.io/alexprieu/ee1dac01-a91c-4f52-89eb-200412947ce9_Screenshot_2022-04-07_160753_j9z51b+%281%29.png?auto=compress,format'/>
           </Col>
           </Row>
         <Row className="homeRow" >
@@ -43,14 +43,12 @@ const Home = () => {
             </Row>
 
             <Row className="homeRow">
+
           <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649363972/TNMW/Home%20page%20pics/Screenshot_2022-04-07_153002_kwluwo.webp'/>
+          <img alt='' src='https://images.prismic.io/alexprieu/6003c4f8-6c49-4111-a899-76acda67e917_Screenshot_2022-04-07_153024_dvarwx.png?auto=compress,format'/>
           </Col>
           <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649363992/TNMW/Home page pics/Screenshot_2022-04-07_153024_dvarwx.webp'/>
-          </Col>
-          <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649364010/TNMW/Home page pics/girl_with_musk_xpiv4y.webp'/>
+          <img alt='' src='https://images.prismic.io/alexprieu/d6a6e55c-92e9-499d-9762-4cd990fdf805_girl_with_musk_xpiv4y.png?auto=compress,format'/>
           </Col>
         </Row>
 
@@ -65,28 +63,16 @@ const Home = () => {
         </Row>
 
         <Row className="homeRow">
-          <Row className='py-1'>
-          <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649363972/TNMW/Home%20page%20pics/Screenshot_2022-04-07_152933_ycwj2o.webp'/>
-          </Col>
-          <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649363992/TNMW/Home page pics/Screenshot_2022-04-07_153609_pd3lha'/>
-          </Col>
-          <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649364010/TNMW/Home page pics/guy_with_musky_xx847h.webp'/>
-          </Col>
-          </Row>
+
 
           <Row className='py-1'>
           <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649363972/TNMW/Home%20page%20pics/jg_sjgbhe.webp'/>
+          <img alt='' src='https://images.prismic.io/alexprieu/f6a6667f-8f91-4a93-93a9-02cefa96b914_jg_sjgbhe.png?auto=compress,format'/>
           </Col>
           <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649363992/TNMW/Home page pics/nick_eilcfv.webp'/>
+          <img alt='' src='https://images.prismic.io/alexprieu/b3d37dd0-3eee-40de-ac5e-f7e6afd2660c_nick_eilcfv.png?auto=compress,format'/>
           </Col>
-          <Col>
-          <img alt='' src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_300/v1649364010/TNMW/Home page pics/Screenshot_2022-04-07_160432_fioico.webp'/>
-          </Col>
+          
         </Row>
         </Row>
 
