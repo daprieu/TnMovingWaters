@@ -14,7 +14,7 @@ const TnMovingWatersViews = () => {
   return (
   <>
   <MWNavBar/>
-  <div style={{height: "100vh"}}>
+  <div style={{height: "100%"}}>
   <Routes>
   
   <Route path="/" element={<Home />} />
