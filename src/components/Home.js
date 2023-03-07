@@ -28,7 +28,7 @@ const Home = () => {
       <Container className="homeContainer" >
       <Row className='homeRow'>
           <Col>
-          <img className='noDumping' alt=''  src='https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1649363972/TNMW/Home%20page%20pics/Screenshot_2022-04-07_160753_j9z51b.webp'/>
+          <img className='noDumping' alt=''  src='https://images.prismic.io/alexprieu/ee1dac01-a91c-4f52-89eb-200412947ce9_Screenshot_2022-04-07_160753_j9z51b+%281%29.png?auto=compress,format'/>
           </Col>
           </Row>
         <Row className="homeRow" >
