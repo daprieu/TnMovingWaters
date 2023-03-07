@@ -43,7 +43,7 @@ const FishingTripOptions = () => {
                 
             </Col>
             <Col>
-            <img  src="https://res.cloudinary.com/alexprieuweb/image/upload/f_webp/v1646355617/TNMW/20200428_210805_ewhmi4.webp" alt="Smallmouth wading and kayak trips"/>
+            <img  src="https://images.prismic.io/alexprieu/4164ab77-52ea-4ec0-93c9-810db26090f2_20200428_210805_ewhmi4.jpg?auto=compress,format" alt="Smallmouth wading and kayak trips"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -61,7 +61,7 @@ const FishingTripOptions = () => {
                 <p>Boat trips $400 for 2 people(4-5hrs) $500(8+hrs) additional people can be added for $100 each.</p>
             </Col>
             <Col>
-            <img  src="https://res.cloudinary.com/alexprieuweb/image/upload/f_webp/v1646355527/TNMW/tnmw4_pcbwkk.webp" alt="Musky boat and kayak trips"/>
+            <img  src="https://images.prismic.io/alexprieu/86d7f6f3-f3e4-4d07-8806-d814a5a21f47_tnmw4_pcbwkk.jpg?auto=compress,format" alt="Musky boat and kayak trips"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -73,7 +73,7 @@ const FishingTripOptions = () => {
                 <p>$400 for 2 people $100 for each additional person.</p>
             </Col>
             <Col>
-            <img src="https://res.cloudinary.com/alexprieuweb/image/upload/f_webp/v1646699561/TNMW/Screenshot_2022-03-07_183207_nmxe7n.webp" alt="Brown Trout boat and kayak trips"/>
+            <img src="https://images.prismic.io/alexprieu/eea3bc37-123b-440e-b7f1-ab43d765a76c_Screenshot_2022-03-07_183207_nmxe7n.webp?auto=compress,format" alt="Brown Trout boat and kayak trips"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -88,7 +88,7 @@ const FishingTripOptions = () => {
                 </p>
             </Col>
             <Col>
-            <img src="https://res.cloudinary.com/alexprieuweb/image/upload/f_webp/v1646355617/TNMW/20170818_214019_z7hlv4.webp" alt="River striper"/>
+            <img src="https://images.prismic.io/alexprieu/aa30749f-4eaf-4e0c-a4a4-9e703bdd2cc5_20170818_214019_z7hlv4.webp?auto=compress,format" alt="River striper"/>
             </Col>
         </Row>
         <Row className='fishingTrips'>
@@ -102,7 +102,7 @@ const FishingTripOptions = () => {
                 </p>
             </Col>
             <Col>
-            <img src="https://res.cloudinary.com/alexprieuweb/image/upload/f_webp/v1646699751/TNMW/Screenshot_2022-03-07_183539_tbo5jq.webp" alt="combo trips"/>
+            <img src="https://images.prismic.io/alexprieu/32e46208-f3f7-4579-aca6-7ccccf5479a7_Screenshot_2022-03-07_183539_tbo5jq.webp?auto=compress,format" alt="combo trips"/>
             </Col>
         </Row>
         <p className='bodyText'>
