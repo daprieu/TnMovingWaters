@@ -24,7 +24,7 @@ const Guides = () => {
       <h1>Guides</h1>
       <Row className='guidesContainer d-flex justify-content-center justify-content-around'>
         <Card className='guideCard'>
-            <Card.Img style={{padding: '.5em'}} variant="top" src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646697339/TNMW/Screenshot_2022-03-07_175528_vabhm3.webp" />
+            <Card.Img style={{padding: '.5em'}} variant="top" src="https://images.prismic.io/alexprieu/4461a98b-1e66-414e-bb0f-14593253fa25_Screenshot_2022-03-07_175528_vabhm3.png?auto=compress,format" />
                 <Card.Body>
                     <Card.Title>Nick Adams</Card.Title>
                     <Card.Text>
@@ -36,7 +36,7 @@ const Guides = () => {
             </Card>
 
             <Card className='guideCard'>
-                <Card.Img style={{padding: '.5em'}} variant="top" src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646697636/TNMW/Screenshot_2022-03-07_180025_bjhmjs.webp" />
+                <Card.Img style={{padding: '.5em'}} variant="top" src="https://images.prismic.io/alexprieu/5d7d0c90-1007-4cd7-a6d6-51a635a2b75d_Screenshot_2022-03-07_180025_bjhmjs.png?auto=compress,format" />
                     <Card.Body>
                         <Card.Title>J.G. Auman</Card.Title>
                         <Card.Text>
