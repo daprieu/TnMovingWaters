@@ -29,7 +29,7 @@ const Boats = () => {
                 </p>
             </Col>
             <Col>
-            <img  src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646698032/TNMW/b1_da3elq.webp" alt="johnboat"/>
+            <img  src="https://images.prismic.io/alexprieu/d79cce5c-a531-4bc8-a2ac-27a0204c3800_b1_da3elq.jpg?auto=compress,format" alt="johnboat"/>
             </Col>
         </Row>
         <Row className='boats'>
@@ -41,7 +41,7 @@ const Boats = () => {
                 </p>
             </Col>
             <Col>
-            <img  src="https://res.cloudinary.com/alexprieuweb/image/upload/c_scale,f_webp,w_600/v1646698031/TNMW/b2_bnjjgb.webp" alt="kayaks"/>
+            <img  src="https://images.prismic.io/alexprieu/e214c87c-7cfd-4c59-9b10-4b8a07a834ee_b2_bnjjgb.jpg?auto=compress,format" alt="kayaks"/>
             </Col>
         </Row>
         </Container>
