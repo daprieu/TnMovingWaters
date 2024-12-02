@@ -1,83 +1,80 @@
-.siteBanner{
-    margin-bottom: 1em;
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #20252a;
-    
+h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
 }
-.video{
-    background-size: cover;
-    background-position: 50% 50%;
-    position: absolute;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    right: -100%;
-    bottom: -100%;
-    top: -100%;
-    left: -100%;
-    object-fit: cover;
-    z-index: -1;
-    
-    filter: brightness(50%);
+.hero {
+  margin-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #20252a;
+  color: white;
+  gap: 2rem;
+  padding: 5rem 0;
 }
-.videoText{
-    color: white;
-    
-    display: flex;
-    
-    
-    
-    font-weight: 700;
-   
+.heroContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
-.videoText h1{
-    font-weight: 700;
-    font-size: 3em;
-    
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+.heroImage {
+  flex: 1;
+}
+.noDumping {
+  width: 100%;
+  min-width: 300px;
+}
+.homeContentWrapper {
+  padding: 5rem 0;
+}
+.homeRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+}
+.mainContent {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap-reverse;
+}
+.mainContent p {
+  max-width: 65ch;
+  flex: 1;
+  min-width: 400px;
+}
+.homeImageGallery img {
+  min-width: 350px;
+  flex: 1;
 }
 
-
-.homeRow{
-    margin: .5em;
-    padding: 1em;
-    text-align: left;  
-    border-radius: .5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: 1em;
-    background-color: white;
-}
-
-.homeRow img{
-        display: flex;
-        width: 300px; 
-        margin: auto;
-       
-    
-}
-.noDumping{
-    width: 800px
+.homeImageGallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 600px) {
-    .homeRow {
-        display: flex;
-        flex-direction: column;
-       
-    }
-    .contact{
-        display: flex;
-        flex-direction: column;
-    }
-    .noDumping{
-        width: 275px
-    }
-    .homeRow img{
-        width: 275px
-    
-}
+  .contact {
+    display: flex;
+    flex-direction: column;
   }
+  .noDumping {
+    width: 275px;
+  }
+  .homeRow img {
+    width: 275px;
+  }
+}

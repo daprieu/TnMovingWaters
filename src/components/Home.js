@@ -1,86 +1,98 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import './Home.css'
-import {Helmet} from 'react-helmet'
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./Home.css";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
-      <>
-        <Helmet>
-    <title>Welcome to Tennessee Moving Waters</title>
-    <meta name="Tennessee Moving Waters Home Page" content="A Middle Tennesse Fishing Guide service where we love to find big fish in smaller waters. We enjoy nature and the peace that comes with it, that is until we get one on the line and then we go crazy. It is an adrenaline rush hooking some of the fish we find. Take a look and give us a shout!" />
-    <link rel="icon" type="image/png" href="https://images.prismic.io/alexprieu/b90cd64d-87b3-4646-a5aa-816b55d67013_Frame+2+%281%29.png?auto=compress,format" sizes="64x64" />
-    {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"></script>
-    <script>
-    {` window.dataLayer = window.dataLayer || [];
+    <>
+      <Helmet>
+        <title>Welcome to Tennessee Moving Waters</title>
+        <meta
+          name="Tennessee Moving Waters Home Page"
+          content="A Middle Tennesse Fishing Guide service where we love to find big fish in smaller waters. We enjoy nature and the peace that comes with it, that is until we get one on the line and then we go crazy. It is an adrenaline rush hooking some of the fish we find. Take a look and give us a shout!"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="https://images.prismic.io/alexprieu/b90cd64d-87b3-4646-a5aa-816b55d67013_Frame+2+%281%29.png?auto=compress,format"
+          sizes="64x64"
+        />
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
+        ></script>
+        <script>
+          {` window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-G85YFC6WJT');`}
-    </script>
-  </Helmet>
-        <div className='siteBanner'>
+        </script>
+      </Helmet>
 
-        
-        <div className='videoText'><h1>Welcome To<br/>Tennessee Moving Waters<br/>Guide Service</h1></div>
+      <div className="hero">
+        <Container className="heroContentWrapper">
+          <div className="heroCopy">
+            <h1>Tennessee Moving Waters</h1>
+            <p>Discover Untouched Beauty, Trophy Fish, and Expert Guides</p>
+          </div>
+        </Container>
+      </div>
+      <Container className="homeContentWrapper">
+        <div className="homeRow">
+          <div className="mainContent">
+            <p>
+              With years of experience fishing Tennessee’s waters, we’ve
+              mastered the art of finding those hidden gems—untouched streams
+              and rivers teeming with life. At Tennessee Moving Waters, we take
+              you beyond the usual crowded spots to explore serene, lesser-known
+              waterways. But don’t let their size fool you; these waters are
+              home to some of the largest trophy fish you’ll ever encounter.
+              Whether you’re wading for smallmouth bass, kayaking for musky or
+              brown trout, or boating across expansive waters, our professional
+              guides will ensure you have an unforgettable fishing adventure
+              while learning about the unique ecology and habits of these
+              incredible fish.
+            </p>
+            <div className="heroImage">
+              <img
+                className="noDumping"
+                alt="No Dumping Sign"
+                src="https://images.prismic.io/alexprieu/ee1dac01-a91c-4f52-89eb-200412947ce9_Screenshot_2022-04-07_160753_j9z51b+%281%29.png?auto=compress,format"
+              />
+            </div>
+          </div>
+          <div className="homeImageGallery">
+            <img
+              alt=""
+              src="https://images.prismic.io/alexprieu/Z01KOpbqstJ977wJ_image000000.jpg?auto=format,compress"
+            />
+
+            <img
+              alt=""
+              src="https://images.prismic.io/alexprieu/Z01KO5bqstJ977wK_image000001.jpg?auto=format,compress"
+            />
+
+            <img
+              alt=""
+              src="https://images.prismic.io/alexprieu/Z01KPJbqstJ977wL_image000002.jpg?auto=format,compress"
+            />
+
+            <img
+              alt=""
+              src="https://images.prismic.io/alexprieu/Z01KPZbqstJ977wM_image000003.jpg?auto=format,compress"
+            />
+            <img
+              alt=""
+              src="https://images.prismic.io/alexprieu/Z01KOZbqstJ977wI_image000004.jpg?auto=format,compress"
+            />
+          </div>
         </div>
-      <Container className="homeContainer" >
-      <Row className='homeRow'>
-          <Col>
-          <img className='noDumping' alt=''  src='https://images.prismic.io/alexprieu/ee1dac01-a91c-4f52-89eb-200412947ce9_Screenshot_2022-04-07_160753_j9z51b+%281%29.png?auto=compress,format'/>
-          </Col>
-          </Row>
-        <Row className="homeRow" >
-            <Col >
-            <p>
-            We believe in taking  a different approach to a guided fishing trip. 
-            We like to get away from the crowds and let you see what Tennessee truly has to offer.
-            Take a trip with us off the beaten path and explore small rivers/streams that rarely see other anglers,
-            but that doesn't mean we are talking about small fish. Giants roam these smaller waters and it is our goal 
-            to give you a shot at the trophy fish of a lifetime.
-            </p>
-            </Col>
-            </Row>
-
-            <Row className="homeRow">
-
-          <Col>
-          <img alt='' src='https://images.prismic.io/alexprieu/6003c4f8-6c49-4111-a899-76acda67e917_Screenshot_2022-04-07_153024_dvarwx.png?auto=compress,format'/>
-          </Col>
-          <Col>
-          <img alt='' src='https://images.prismic.io/alexprieu/d6a6e55c-92e9-499d-9762-4cd990fdf805_girl_with_musk_xpiv4y.png?auto=compress,format'/>
-          </Col>
-        </Row>
-
-        <Row className="homeRow" >
-        <Col >
-            <p>
-            We offer many different trips for a variety of species including wading for smallmouth bass and kayak trips
-            for smallmouth, musky, and brown trout. We also offer boat trips for musky and smallmouth on the larger waters.
-            Our guides are professional and strive to give you the best experience possible.
-            </p>
-            </Col>
-        </Row>
-
-        <Row className="homeRow">
-
-
-          <Row className='py-1'>
-          <Col>
-          <img alt='' src='https://images.prismic.io/alexprieu/f6a6667f-8f91-4a93-93a9-02cefa96b914_jg_sjgbhe.png?auto=compress,format'/>
-          </Col>
-          <Col>
-          <img alt='' src='https://images.prismic.io/alexprieu/b3d37dd0-3eee-40de-ac5e-f7e6afd2660c_nick_eilcfv.png?auto=compress,format'/>
-          </Col>
-          
-        </Row>
-        </Row>
-
       </Container>
-      <div></div>
-      </>
-  )
-}
+    </>
+  );
+};
 
-export default Home
+export default Home;
