@@ -55,7 +55,7 @@ const AboutSection = () => (
           ].map((image, index) => (
             <img
               key={index}
-              alt={`Gallery image ${index + 1}`}
+              alt={`Gallery item ${index + 1}`}
               src={`https://images.prismic.io/alexprieu/${image}?auto=format,compress`}
             />
           ))}
