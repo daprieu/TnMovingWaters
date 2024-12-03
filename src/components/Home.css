@@ -1,83 +1,104 @@
-.siteBanner{
-    margin-bottom: 1em;
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #20252a;
-    
-}
-.video{
-    background-size: cover;
-    background-position: 50% 50%;
-    position: absolute;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    right: -100%;
-    bottom: -100%;
-    top: -100%;
-    left: -100%;
-    object-fit: cover;
-    z-index: -1;
-    
-    filter: brightness(50%);
-}
-.videoText{
-    color: white;
-    
-    display: flex;
-    
-    
-    
-    font-weight: 700;
-   
-}
-.videoText h1{
-    font-weight: 700;
-    font-size: 3em;
-    
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
 }
 
-
-.homeRow{
-    margin: .5em;
-    padding: 1em;
-    text-align: left;  
-    border-radius: .5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: 1em;
-    background-color: white;
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  background: url("https://images.prismic.io/alexprieu/Z06ZiJbqstJ97-TS_hero-image.webp?auto=format,compress")
+    no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
-.homeRow img{
-        display: flex;
-        width: 300px; 
-        margin: auto;
-       
-    
-}
-.noDumping{
-    width: 800px
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
 }
 
-@media only screen and (max-width: 600px) {
-    .homeRow {
-        display: flex;
-        flex-direction: column;
-       
-    }
-    .contact{
-        display: flex;
-        flex-direction: column;
-    }
-    .noDumping{
-        width: 275px
-    }
-    .homeRow img{
-        width: 275px
-    
+.heroContentWrapper {
+  position: relative;
+  z-index: 2;
 }
+
+.heroContentWrapper {
+  max-width: 800px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin: 0;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.aboutSection {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+
+  text-align: left;
+}
+
+.mainContent {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Image Gallery */
+.homeImageGallery {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  ); /* Increased min-width for larger images on desktop */
+  gap: 1.5rem; /* Spacing between images */
+  padding: 5rem 0;
+}
+
+.homeImageGallery img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  margin: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
   }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .homeImageGallery img {
+    max-width: 90%; /* Reduce image size for smaller screens */
+  }
+}

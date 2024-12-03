@@ -1,38 +1,66 @@
-
-.fishingTrips {
-    margin: 1em;
-    padding: 2em;
-    text-align: left;  
-    border-radius: .5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: .75em;
+.fishing-trips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5rem 0;
+  width: 100%;
+  gap: 5rem;
+}
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tripsSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+}
+.fishingTrip {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #000;
 }
 
-.fishingTrips img {
+.tripDetailsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+.tripImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.fishingTrip img {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.bodyText {
+  font-size: 1.25em;
+}
+.fishingTrip h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 991px) {
+  .fishingTrip {
     display: flex;
-    width: 80%; 
-    margin: auto;
-   
-}
-.bodyText{
-    padding-left: 3em;
-    padding-right: 3em;
-    font-size: 1.25em;
-    
-}
-.fishingTrips h2{
-    font-size: 2.2em;
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 600px) {
-    .fishingTrips {
-        display: flex;
-        flex-direction: column;
-       
-    }
-    .contact{
-        display: flex;
-        flex-direction: column;
-    }
+    flex-direction: column-reverse;
+    gap: 2rem;
   }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+}
