@@ -31,7 +31,7 @@ const AboutSection = () => (
             <p>
               With years of experience fishing Tennessee’s waters, we’ve
               mastered the art of finding those hidden gems—untouched streams
-              and rivers teeming with life. At Tennessee Moving Waters, we take
+              and rivers teeming with life in and around the surronding areas Nashville and middle Tennessee. At Tennessee Moving Waters, we take
               you beyond the usual crowded spots to explore serene, lesser-known
               waterways. But don’t let their size fool you; these waters are
               home to some of the largest trophy fish you’ll ever encounter.
