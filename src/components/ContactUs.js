@@ -25,7 +25,7 @@ const ContactUs = () => {
           <title>Contact Us!</title>
           <meta
             name="Contact information page"
-            content="If you would like to learn more or have any questions abour our fishing guide services, contact us anytime!"
+            content="Contact Tennessee Moving Waters for expert fishing guide services in Nashville and beyond. Reach out to learn more or ask any questions about our fishing adventures."
           />
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <script
