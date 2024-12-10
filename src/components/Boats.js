@@ -1,30 +1,34 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Helmet } from "react-helmet";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Boats.css";
 
 const Boats = () => {
   return (
     <>
-      <Helmet>
-        <title>Tennessee Moving Waters Boats</title>
-        <meta
-          name="Our Boats"
-          content="Availble boats to use in our selected guide services."
-        />
-        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
-        ></script>
-        <script>
-          {` window.dataLayer = window.dataLayer || [];
+      <HelmetProvider>
+        <Helmet>
+          <title>Tennessee Moving Waters Boats</title>
+          <meta
+            name="Our Boats"
+            content="Availble boats to use in our selected guide services."
+          />
+          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
+          ></script>
+          <script>
+            {` window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-G85YFC6WJT');`}
-        </script>
-      </Helmet>
+          </script>
+        </Helmet>
+      </HelmetProvider>
       <Container className="boats-container">
         <h1>Our Boats</h1>
         <Row className="boats">
