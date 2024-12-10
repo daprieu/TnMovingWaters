@@ -32,18 +32,22 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.prismic.io/alexprieu/Z06ZiJbqstJ97-TS_hero-image.webp?auto=format,compress"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,7 +61,28 @@
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>TN Moving Waters</title>
+    <title>
+      Tennessee Moving Waters | Guided Trophy Fishing Adventures in Untouched
+      Rivers
+    </title>
+    <meta
+      name="description"
+      content="Explore Tennessee's pristine rivers and streams with expert fishing guides. Discover trophy fish like smallmouth bass, musky, and brown trout. Book your adventure today!"
+    />
+    <style>
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        max-height: 75vh;
+        height: 100%;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        position: relative;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

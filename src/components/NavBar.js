@@ -1,7 +1,10 @@
 import React from "react";
 import "./NavBar.css";
 
-import { Container, Nav, Navbar, Col } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Col from "react-bootstrap/Col";
 
 export const MWNavBar = () => {
   return (
@@ -28,8 +31,7 @@ export const MWNavBar = () => {
           <Navbar.Toggle />
           <Navbar.Collapse className="" id="responsive-navbar-nav ">
             <Col sm>
-              <Nav fill className="linktext">
-                <Nav.Link href="/">Home</Nav.Link>
+              <Nav className="linktext">
                 <Nav.Link href="/fishing-trip-options">Fishing Trips</Nav.Link>
                 <Nav.Link href="/boats">Boats</Nav.Link>
                 <Nav.Link href="/guides">Guides</Nav.Link>

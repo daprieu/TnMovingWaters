@@ -1,7 +1,9 @@
 import React from "react";
 
-import { Container, Row, Col } from "react-bootstrap";
-import { Helmet } from "react-helmet";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Home.css";
 
 const Hero = () => (
@@ -9,11 +11,11 @@ const Hero = () => (
     <Container className="heroContentWrapper">
       <div className="heroCopy">
         <h1>Tennessee Moving Waters</h1>
-        <p>
+        <span>
           Where Wild Waters Meet Trophy Fish. Explore Tennessee’s untouched
           rivers and streams with expert guides who turn every cast into an
           adventure. Find peace in nature—and adrenaline in the fight.
-        </p>
+        </span>
       </div>
     </Container>
   </div>
@@ -54,6 +56,9 @@ const AboutSection = () => (
             "Z01KOZbqstJ977wI_image000004.jpg",
           ].map((image, index) => (
             <img
+              width={100}
+              height={100}
+              loading="lazy"
               key={index}
               alt={`Gallery item ${index + 1}`}
               src={`https://images.prismic.io/alexprieu/${image}?auto=format,compress`}
@@ -68,31 +73,33 @@ const AboutSection = () => (
 const Home = () => {
   return (
     <>
-      <Helmet>
-        <title>Welcome to Tennessee Moving Waters</title>
-        <meta
-          name="description"
-          content="A Middle Tennessee fishing guide service that takes you to serene, lesser-known waterways for an unforgettable adventure."
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="https://images.prismic.io/alexprieu/b90cd64d-87b3-4646-a5aa-816b55d67013_Frame+2+%281%29.png?auto=compress,format"
-          sizes="64x64"
-        />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
-        ></script>
-        <script>
-          {`
+      <HelmetProvider>
+        <Helmet>
+          <title>Welcome to Tennessee Moving Waters</title>
+          <meta
+            name="description"
+            content="Discover Tennessee's untouched rivers and streams with expert fishing guides. Explore serene waterways, catch trophy fish like smallmouth bass and musky, and enjoy unforgettable adventures in nature. Book your guided fishing trip today!"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="https://images.prismic.io/alexprieu/b90cd64d-87b3-4646-a5aa-816b55d67013_Frame+2+%281%29.png?auto=compress,format"
+            sizes="64x64"
+          />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
+          ></script>
+          <script>
+            {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-G85YFC6WJT');
           `}
-        </script>
-      </Helmet>
+          </script>
+        </Helmet>
+      </HelmetProvider>
       <Hero />
       <AboutSection />
     </>

@@ -12,6 +12,7 @@
 .noDumping {
   width: 100%;
   min-width: 300px;
+  height: auto;
 }
 .footerContentWrapper {
   display: flex;

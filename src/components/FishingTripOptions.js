@@ -1,7 +1,7 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import "./FishingTripOptions.css";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const tripDetails = [
   {
@@ -92,23 +92,25 @@ const tripDetails = [
 const FishingTripOptions = () => {
   return (
     <>
-      <Helmet>
-        <title>Fishing Trip Options</title>
-        <meta
-          name="description"
-          content="We have a variety of fishing guide options, take a look to see what we offer."
-        />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
-        ></script>
-        <script>
-          {`window.dataLayer = window.dataLayer || [];
+      <HelmetProvider>
+        <Helmet>
+          <title>Fishing Trip Options</title>
+          <meta
+            name="description"
+            content="We have a variety of fishing guide options, take a look to see what we offer."
+          />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
+          ></script>
+          <script>
+            {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-G85YFC6WJT');`}
-        </script>
-      </Helmet>
+          </script>
+        </Helmet>
+      </HelmetProvider>
       <Container className="fishing-trips-container">
         <header className="sectionHeader">
           <h1>Fishing Trips</h1>

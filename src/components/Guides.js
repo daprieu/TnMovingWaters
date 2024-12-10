@@ -1,31 +1,34 @@
 import React from "react";
-import { Row } from "react-bootstrap";
-import { Card, Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
 import "./Guides.css";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Guides = () => {
   return (
     <>
-      <Helmet>
-        <title>Tennessee Moving Waters Guides</title>
-        <meta
-          name="Our Fishing Guides"
-          content="Meet the our fishing guides. J.G. and Nick now everything there is to finding the largest and strongest fish that are sure to put up a fight. Between cast they may share some Tennessee knowledge with you too!"
-        />
-        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
-        ></script>
-        <script>
-          {` window.dataLayer = window.dataLayer || [];
+      <HelmetProvider>
+        <Helmet>
+          <title>Tennessee Moving Waters Guides</title>
+          <meta
+            name="Our Fishing Guides"
+            content="Meet the our fishing guides. J.G. and Nick now everything there is to finding the largest and strongest fish that are sure to put up a fight. Between cast they may share some Tennessee knowledge with you too!"
+          />
+          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-G85YFC6WJT"
+          ></script>
+          <script>
+            {` window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'G-G85YFC6WJT');`}
-        </script>
-      </Helmet>
+          </script>
+        </Helmet>
+      </HelmetProvider>
       <Container className="guides-container">
         <h1>Guides</h1>
         <Row className="guidesContainer d-flex justify-content-center justify-content-around">
