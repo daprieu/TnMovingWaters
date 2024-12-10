@@ -78,7 +78,7 @@ const Home = () => {
           <title>Welcome to Tennessee Moving Waters</title>
           <meta
             name="description"
-            content="Discover Tennessee's untouched rivers and streams with expert fishing guides. Explore serene waterways, catch trophy fish like smallmouth bass and musky, and enjoy unforgettable adventures in nature. Book your guided fishing trip today!"
+            content="Discover untouched rivers and streams around Nashville with expert fishing guides. Explore serene waterways, catch trophy fish like smallmouth bass and musky, and enjoy unforgettable adventures in nature. Book your guided fishing trip today!"
           />
           <link
             rel="icon"
