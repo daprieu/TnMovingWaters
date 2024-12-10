@@ -12,8 +12,8 @@ const Hero = () => (
       <div className="heroCopy">
         <h1>Tennessee Moving Waters</h1>
         <span>
-          Where Wild Waters Meet Trophy Fish. Explore Tennessee’s untouched
-          rivers and streams with expert guides who turn every cast into an
+          Where Wild Waters Meet Trophy Fish. Explore untouched
+          rivers and streams around Nashville with expert guides who turn every cast into an
           adventure. Find peace in nature—and adrenaline in the fight.
         </span>
       </div>
