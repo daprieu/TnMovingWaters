@@ -12,7 +12,7 @@ const Guides = () => {
         <Helmet>
           <title>Tennessee Moving Waters Guides</title>
           <meta
-            name="Our Fishing Guides"
+            name="Our Nashville Native Fishing Guides"
             content="Meet the our fishing guides. J.G. and Nick now everything there is to finding the largest and strongest fish that are sure to put up a fight. Between cast they may share some Tennessee knowledge with you too!"
           />
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
