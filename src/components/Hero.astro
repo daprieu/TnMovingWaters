@@ -1,0 +1,177 @@
+---
+import { Image } from 'astro:assets';
+
+export type HeroCta = {
+  href: string;
+  label: string;
+  variant?: 'primary' | 'ghost';
+};
+
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  lead: string;
+  imageSrc: string;
+  imageAlt: string;
+  primaryCta?: HeroCta;
+  secondaryCta?: HeroCta;
+  stats?: string[];
+}
+
+const {
+  eyebrow,
+  title,
+  lead,
+  imageSrc,
+  imageAlt,
+  primaryCta,
+  secondaryCta,
+  stats = [],
+} = Astro.props;
+---
+
+<section class="hero" aria-label="Hero">
+  <div class="heroMedia" aria-hidden="true">
+    <Image
+      src={imageSrc}
+      alt={imageAlt}
+      width={1920}
+      height={1080}
+      format="avif"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+    <div class="overlay"></div>
+  </div>
+
+  <div class="container heroInner">
+    <div class="copy reveal">
+      {eyebrow ? <div class="eyebrow">{eyebrow}</div> : null}
+      <h1>{title}</h1>
+      <p class="lead">{lead}</p>
+
+      {(primaryCta || secondaryCta) ? (
+        <div class="ctaRow">
+          {primaryCta ? (
+            <a class={`btn btn--${primaryCta.variant ?? 'primary'}`} href={primaryCta.href}>
+              {primaryCta.label}
+            </a>
+          ) : null}
+          {secondaryCta ? (
+            <a class={`btn btn--${secondaryCta.variant ?? 'ghost'}`} href={secondaryCta.href}>
+              {secondaryCta.label}
+            </a>
+          ) : null}
+        </div>
+      ) : null}
+
+      {stats.length ? (
+        <ul class="stats" aria-label="Highlights">
+          {stats.map((s) => (
+            <li>{s}</li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: clamp(520px, 64vh, 720px);
+    display: grid;
+    align-items: end;
+    overflow: clip;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .heroMedia {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .heroMedia :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(1.05) contrast(1.02);
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(900px circle at 10% 20%, rgba(11, 79, 108, 0.55), transparent 58%),
+      radial-gradient(900px circle at 85% 10%, rgba(20, 92, 66, 0.5), transparent 60%),
+      linear-gradient(180deg, rgba(11, 18, 32, 0.35), rgba(11, 18, 32, 0.68));
+  }
+
+  .heroInner {
+    position: relative;
+    z-index: 1;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .copy {
+    max-width: 64ch;
+    color: #fff;
+  }
+
+  .eyebrow {
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  }
+
+  h1 {
+    font-size: var(--step-4);
+    line-height: 1.02;
+    margin-top: 0.35rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  .lead {
+    font-size: var(--step-1);
+    max-width: 62ch;
+    margin-top: 0.9rem;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .ctaRow {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.35rem;
+  }
+
+  .stats {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.4rem;
+    padding: 0;
+  }
+
+  .stats li {
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(11, 18, 32, 0.25);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.95rem;
+    backdrop-filter: blur(8px);
+  }
+
+  @media (max-width: 760px) {
+    .heroInner {
+      padding-top: 4.5rem;
+      padding-bottom: 3rem;
+    }
+  }
+</style>

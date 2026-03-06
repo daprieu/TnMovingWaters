@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Gallery from '../components/Gallery.astro';
+import CTA from '../components/CTA.astro';
+
+const description =
+  'Discover untouched rivers and streams around Nashville with expert fishing guides. Explore serene waterways, catch trophy fish like smallmouth bass and musky, and enjoy unforgettable adventures in nature. Book your guided fishing trip today!';
+
+const heroImage =
+  'https://images.prismic.io/alexprieu/Z06ZiJbqstJ97-TS_hero-image.webp?auto=format,compress';
+
+const gallery = [
+  'Z01KOpbqstJ977wJ_image000000.jpg',
+  'Z01KO5bqstJ977wK_image000001.jpg',
+  'Z01KPJbqstJ977wL_image000002.jpg',
+  'Z01KPZbqstJ977wM_image000003.jpg',
+  'Z01KOZbqstJ977wI_image000004.jpg',
+].map((image, index) => ({
+  src: `https://images.prismic.io/alexprieu/${image}?auto=format,compress`,
+  alt: `Gallery item ${index + 1}`,
+}));
+---
+
+<BaseLayout title="Welcome to Tennessee Moving Waters" description={description}>
+  <Hero
+    eyebrow="Middle Tennessee guide service"
+    title="Tennessee Moving Waters"
+    lead="Where wild water meets trophy fish. Explore rivers and streams around Nashville with guides who turn every cast into an adventure."
+    imageSrc={heroImage}
+    imageAlt="Angler fishing on moving water"
+    primaryCta={{ href: '/fishing-trip-options', label: 'Explore Trip Options', variant: 'primary' }}
+    secondaryCta={{ href: '/contact-us', label: 'Book a Trip', variant: 'ghost' }}
+    stats={['Wade, kayak, or boat', 'Smallmouth, musky, trout', 'March through November']}
+  />
+
+  <section class="aboutSection">
+    <div class="container homeContentWrapper">
+      <div class="aboutGrid">
+        <div class="mainContent reveal">
+          <div class="eyebrow">Why we guide</div>
+          <h2>Quiet water. Hard fights.</h2>
+          <div class="about">
+            <p>
+              With years of experience fishing Tennessee's waters, we've mastered the art of finding hidden
+              gems-untouched streams and rivers teeming with life around Nashville and Middle Tennessee. We take
+              you beyond the usual crowded spots to explore serene, lesser-known waterways.
+            </p>
+            <p>
+              Whether you're wading for smallmouth bass, kayaking for musky or brown trout, or boating across
+              expansive water, our guides focus on putting you on the best bite for the season.
+            </p>
+          </div>
+        </div>
+
+        <aside class="callout card reveal">
+          <h3>What to expect</h3>
+          <ul>
+            <li>Local knowledge and seasonal patterns</li>
+            <li>Gear provided on kayak trips (see details)</li>
+            <li>Focus on trophy opportunities</li>
+            <li>Scenic floats and wildlife sightings</li>
+          </ul>
+          <div class="calloutActions">
+            <a class="btn btn--primary" href="/fishing-trip-options">View trips</a>
+            <a class="btn btn--ghost" href="/contact-us">Ask a question</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <Gallery images={gallery} heading="From the water" />
+
+  <CTA
+    title="Ready to get on the water?"
+    body="Tell us what you want to chase and when you're visiting. We'll recommend the best trip for the season."
+    primaryHref="/contact-us"
+    primaryLabel="Contact Us"
+    secondaryHref="/fishing-trip-options"
+    secondaryLabel="See Trip Options"
+  />
+</BaseLayout>
+
+<style>
+  .aboutSection {
+    padding: 5rem 0;
+    background:
+      radial-gradient(900px circle at 15% 0%, rgba(11, 79, 108, 0.08), transparent 55%),
+      rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(11, 18, 32, 0.08);
+    border-bottom: 1px solid rgba(11, 18, 32, 0.08);
+  }
+
+  .homeContentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .aboutGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .mainContent {
+    font-size: 1rem;
+    color: var(--color-ink);
+  }
+
+  .callout {
+    padding: 1.25rem;
+    border-radius: 22px;
+    position: sticky;
+    top: 92px;
+  }
+
+  .callout h3 {
+    font-size: var(--step-1);
+    margin-bottom: 0.75rem;
+  }
+
+  .callout ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--color-muted);
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .calloutActions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .aboutGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .callout {
+      position: static;
+    }
+  }
+</style>

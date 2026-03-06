@@ -1,0 +1,307 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CTA from '../components/CTA.astro';
+import { Image } from 'astro:assets';
+
+type SubItem = {
+  duration: string;
+  price: string;
+};
+
+type PricingItem = {
+  type: string;
+  price?: string;
+  subItems?: SubItem[];
+};
+
+type Trip = {
+  title: string;
+  description: string;
+  excitement?: string;
+  pricing?: PricingItem[];
+  additionalInfo?: string;
+  imageUrl: string;
+  altText: string;
+};
+
+const tripDetails: Trip[] = [
+  {
+    title: 'Smallmouth Wading & Kayak Trips',
+    description:
+      'Embark on an unforgettable journey deep into the heart of Tennessee, where giant Bronzebacks thrive in waters hidden from most anglers. These adventures may take you a bit off the beaten path, but the beautiful scenery and diverse wildlife make the trip well worth it. Experience a step back in time as you wade into the creek, becoming one with your surroundings.',
+    excitement:
+      'The excitement truly begins when you hook your first smallmouth—these fish are renowned for their incredible strength and acrobatics in shallow water. And we’re not talking about small fish; our trips focus on fish in the 16 to 22" range, promising a thrilling fight every time. Available from March through November, this is an experience you won’t forget.',
+    pricing: [
+      { type: 'Wading Trips', price: '$400 for 2 people' },
+      {
+        type: 'Kayak Trips',
+        subItems: [
+          { duration: '4-5 hours', price: '$400 for 2 people' },
+          { duration: '7-8 hours', price: '$500 for 2 people' },
+          { duration: '10+ hours', price: '$600 for 2 people' },
+        ],
+      },
+      { type: 'Additional participants', price: '$100 per person' },
+    ],
+    additionalInfo:
+      'All kayaks and fishing gear are provided for your convenience, ensuring a seamless and enjoyable experience.',
+    imageUrl:
+      'https://images.prismic.io/alexprieu/4164ab77-52ea-4ec0-93c9-810db26090f2_20200428_210805_ewhmi4.jpg?auto=compress,format',
+    altText: 'Smallmouth wading and kayak trips',
+  },
+  {
+    title: 'Musky Boat & Kayak Trips',
+    description:
+      'If you think you are ready to battle one of the strongest fish swimming in fresh water, then the mighty muskellunge awaits. We chase these awesome beasts in some of the most beautiful areas in Tennessee. We fish out of a 2021 G3 18ft jet-powered jonboat on the larger portions of the Caney Fork and Collins Rivers but love to take the kayaks up into the skinny water. It is an amazing experience fighting these awesome fish out of a kayak, but not for the faint of heart.',
+    pricing: [
+      { type: 'Kayak Trips', price: '$500 for 2 people (7-8hrs)' },
+      {
+        type: 'Boat Trips',
+        subItems: [
+          { duration: '4-5 hours', price: '$400 for 2 people' },
+          { duration: '8+ hours', price: '$500 for 2 people' },
+        ],
+      },
+      { type: 'Additional participants', price: '$100 per person' },
+    ],
+    imageUrl:
+      'https://images.prismic.io/alexprieu/86d7f6f3-f3e4-4d07-8806-d814a5a21f47_tnmw4_pcbwkk.jpg?auto=compress,format',
+    altText: 'Musky boat and kayak trips',
+  },
+  {
+    title: 'Brown Trout boat & kayak trips',
+    description:
+      'Take a float down the beautiful Caney Fork River in search of monster brown trout. We routinely see bald eagles, river otters, and many other types of wildlife.',
+    pricing: [
+      { type: 'Boat Trips', price: '$400 for 2 people' },
+      { type: 'Kayak Trips', price: '$400 for 2 people' },
+      { type: 'Additional participants', price: '$100 per person' },
+    ],
+    additionalInfo:
+      'All kayaks and fishing gear are provided for your convenience, ensuring a seamless and enjoyable experience.',
+    imageUrl:
+      'https://images.prismic.io/alexprieu/eea3bc37-123b-440e-b7f1-ab43d765a76c_Screenshot_2022-03-07_183207_nmxe7n.webp?auto=format,compress',
+    altText: 'Brown Trout boat and kayak trips',
+  },
+  {
+    title: 'River Striper',
+    description:
+      "For a short time each year (June - Sept.) we offer a unique opportunity to wade for giant stripers. Most fish are caught on topwater, and it is always a night bite. If you aren't scared of the dark, this is something you've got to try.",
+    pricing: [
+      { type: 'Wading Trips', price: '$300 for 2 people (4-5hrs)' },
+      { type: 'Additional participants', price: '$100 per person' },
+    ],
+    additionalInfo: 'You will need to bring your own waders.',
+    imageUrl:
+      'https://images.prismic.io/alexprieu/aa30749f-4eaf-4e0c-a4a4-9e703bdd2cc5_20170818_214019_z7hlv4.webp?auto=format,compress',
+    altText: 'River Striper trips',
+  },
+  {
+    title: 'Combo Trips',
+    description:
+      'During certain times of the year we have the opportunity to chase multiple different species of trophy fish in a single day/night. These trips take some effort but the rewards can be amazing.',
+    additionalInfo: 'Contact us for availability.',
+    imageUrl:
+      'https://images.prismic.io/alexprieu/32e46208-f3f7-4579-aca6-7ccccf5479a7_Screenshot_2022-03-07_183539_tbo5jq.webp?auto=format,compress',
+    altText: 'Combo trips',
+  },
+];
+
+const heroImage =
+  'https://images.prismic.io/alexprieu/86d7f6f3-f3e4-4d07-8806-d814a5a21f47_tnmw4_pcbwkk.jpg?auto=compress,format';
+---
+
+<BaseLayout
+  title="Fishing Trip Options"
+  description="We have a variety of fishing guide options, take a look to see what we offer."
+>
+  <Hero
+    eyebrow="Trip options"
+    title="Fishing Trips"
+    lead="Pick your water and your species. We'll put you in the right place at the right time."
+    imageSrc={heroImage}
+    imageAlt="Angler holding a trophy fish"
+    primaryCta={{ href: '/contact-us', label: 'Book a Trip', variant: 'primary' }}
+    secondaryCta={{ href: '/guides', label: 'Meet the Guides', variant: 'ghost' }}
+    stats={['Wading, kayak, and boat trips', 'Trophy-focused', 'Middle Tennessee waters']}
+  />
+
+  <section class="section">
+    <div class="container fishing-trips-container">
+      <header class="sectionHeader">
+        <h2 class="pageTitle">Trip Breakdown</h2>
+        <p class="bodyText">
+          We offer a variety of fishing trips for various species. We try to stay on a trophy bite. Certain times
+          of the year are better for each species of fish. If you are looking to catch a BIG fish, we will take you
+          out for the hottest bite for that time of year.
+        </p>
+      </header>
+
+      <div class="tripsSection">
+        {tripDetails.map((trip) => (
+          <section class="fishingTrip card reveal">
+            <div class="tripDetailsWrapper">
+              <h2>{trip.title}</h2>
+              <p>{trip.description}</p>
+              {trip.excitement ? <p>{trip.excitement}</p> : null}
+
+              {trip.pricing ? (
+                <>
+                  <h3>Trip Pricing</h3>
+                  <ul>
+                    {trip.pricing.map((item) => (
+                      <li>
+                        <strong>{item.type}</strong>: {item.price}
+                        {item.subItems ? (
+                          <ul>
+                            {item.subItems.map((sub: SubItem) => (
+                              <li>
+                                {sub.duration}: {sub.price}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
+
+              {trip.additionalInfo ? <p>{trip.additionalInfo}</p> : null}
+            </div>
+            <div class="tripImageWrapper">
+              <Image
+                src={trip.imageUrl}
+                alt={trip.altText}
+                width={980}
+                height={720}
+                format="webp"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <footer class="contact-info">
+        <p class="bodyText">
+          We provide kayaks, tackle, and top-of-the-line equipment but you can bring your own if you prefer. You
+          will need a TN fishing license, rain gear (if necessary), snacks, and drinks, and we highly recommend
+          polarized sunglasses.
+        </p>
+        <div class="contact">
+          <strong>Phone:</strong> <a href="tel:+16155062951">615-506-2951</a>
+          <strong>E-mail:</strong> <a href="mailto:Tnmovingwaters@gmail.com">Tnmovingwaters@gmail.com</a>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <CTA
+    title="Not sure which trip fits?"
+    body="Tell us your dates, experience, and what you want to target. We'll recommend the best option for the season."
+    primaryHref="/contact-us"
+    primaryLabel="Contact Us"
+    secondaryHref="/guides"
+    secondaryLabel="Meet the Guides"
+  />
+</BaseLayout>
+
+<style>
+  .fishing-trips-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    gap: 5rem;
+  }
+
+  .pageTitle {
+    font-size: var(--step-2);
+  }
+
+  .sectionHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 72ch;
+  }
+
+  .tripsSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .fishingTrip {
+    display: flex;
+    padding: 1.25rem;
+    border-radius: 22px;
+    gap: 2rem;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.78);
+  }
+
+  .tripDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .tripImageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .tripImageWrapper :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(11, 18, 32, 0.1);
+  }
+
+  .bodyText {
+    font-size: 1.25em;
+  }
+
+  .fishingTrip h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+  }
+
+  ul {
+    padding-left: 1.1rem;
+  }
+
+  li {
+    margin: 0.4rem 0;
+  }
+
+  .contact {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .contact a {
+    color: inherit;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .fishingTrip {
+      flex-direction: column-reverse;
+    }
+  }
+</style>

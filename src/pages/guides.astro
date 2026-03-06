@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CTA from '../components/CTA.astro';
+import { Image } from 'astro:assets';
+
+const guides = [
+  {
+    name: 'Nick Adams',
+    img: 'https://images.prismic.io/alexprieu/4461a98b-1e66-414e-bb0f-14593253fa25_Screenshot_2022-03-07_175528_vabhm3.png?auto=compress,format',
+    bio:
+      "Nick has lived and fished in Middle TN for over 36 years. He is an avid multi-species trophy hunter. Over the years he has developed an extensive knowledge of Tennessee's rivers and streams. The time he has spent exploring on and in the water ensure that you will be fishing in the right place at the right time. You will be hard-pressed to find a more dedicated or hardcore angler.",
+  },
+  {
+    name: 'J.G. Auman',
+    img: 'https://images.prismic.io/alexprieu/5d7d0c90-1007-4cd7-a6d6-51a635a2b75d_Screenshot_2022-03-07_180025_bjhmjs.png?auto=compress,format',
+    bio:
+      "J.G. is a biologist and the Life Support Systems Manager at the Nashville Zoo. He has spent countless hours in Tennessee's rivers and streams doing field work, and of course, fishing. He is involved with projects working with endangered crayfish and hellbenders.",
+  },
+];
+
+const heroImage =
+  'https://images.prismic.io/alexprieu/4461a98b-1e66-414e-bb0f-14593253fa25_Screenshot_2022-03-07_175528_vabhm3.png?auto=compress,format';
+---
+
+<BaseLayout
+  title="Tennessee Moving Waters Guides"
+  description="Meet our fishing guides. J.G. and Nick know everything there is to finding the largest and strongest fish that are sure to put up a fight. Between casts they may share some Tennessee knowledge with you too!"
+>
+  <Hero
+    eyebrow="The team"
+    title="Meet the Guides"
+    lead="Local knowledge, river time, and a serious trophy mindset."
+    imageSrc={heroImage}
+    imageAlt="Guide portrait"
+    primaryCta={{ href: '/contact-us', label: 'Plan a trip', variant: 'primary' }}
+    secondaryCta={{ href: '/fishing-trip-options', label: 'Trip options', variant: 'ghost' }}
+    stats={['Multi-species focus', 'Middle TN rivers & streams', 'Safety and instruction']}
+  />
+
+  <section class="section">
+    <div class="container guides-container">
+      <h2 class="pageTitle">Guides</h2>
+      <div class="guidesGrid">
+        {guides.map((g) => (
+          <article class="guideCard">
+            <Image src={g.img} alt={g.name} width={900} height={650} format="webp" loading="lazy" decoding="async" />
+            <div class="cardBody">
+              <h2>{g.name}</h2>
+              <p>{g.bio}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Have a species in mind?"
+    body="Tell us what you're hoping to catch and when. We'll recommend the right water and approach."
+    primaryHref="/contact-us"
+    primaryLabel="Contact Us"
+    secondaryHref="/fishing-trip-options"
+    secondaryLabel="Trip Options"
+  />
+</BaseLayout>
+
+<style>
+  .guides-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .pageTitle {
+    font-size: var(--step-2);
+  }
+
+  .guidesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .guideCard {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(11, 18, 32, 0.12);
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-1);
+  }
+
+  .guideCard :global(img) {
+    width: 100%;
+    height: auto;
+    padding: 0.6rem;
+    border-radius: 20px;
+  }
+
+  .cardBody {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+
+  .cardBody h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .guidesGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

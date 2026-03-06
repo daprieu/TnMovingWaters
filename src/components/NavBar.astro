@@ -1,0 +1,166 @@
+---
+import { Image } from 'astro:assets';
+
+const links = [
+  { href: '/fishing-trip-options', label: 'Fishing Trips' },
+  { href: '/boats', label: 'Boats' },
+  { href: '/guides', label: 'Guides' },
+  { href: '/contact-us', label: 'Contact Us' },
+];
+
+const logoSrc =
+  'https://images.prismic.io/alexprieu/49f0dd6b-a29f-4ebd-975e-1da11d738b70_TNMW_stkaoa.png?auto=compress,format';
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+
+<header class="siteHeader">
+  <div class="container navInner">
+    <a class="brand" href="/" aria-label="Tennessee Moving Waters home">
+      <Image src={logoSrc} alt="Tennessee Moving Waters Logo" width={220} height={62} format="webp" />
+    </a>
+
+    <details class="navToggle">
+      <summary aria-label="Toggle navigation">Menu</summary>
+      <nav class="navLinks" aria-label="Primary">
+        {links.map((l) => (
+          <a class={`navLink ${isActive(l.href) ? 'active' : ''}`} href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>
+            {l.label}
+          </a>
+        ))}
+      </nav>
+    </details>
+
+    <nav class="navLinks desktop" aria-label="Primary">
+      {links.map((l) => (
+        <a class={`navLink ${isActive(l.href) ? 'active' : ''}`} href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>
+          {l.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .siteHeader {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+  }
+
+  .navInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    gap: 1rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.25rem 0;
+  }
+
+  .logo {
+    width: 160px;
+    height: auto;
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+
+  .navLink {
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: var(--nav-text-muted);
+    padding: 0.5rem 0.25rem;
+    position: relative;
+  }
+
+  .navLink:hover,
+  .navLink:focus-visible {
+    color: var(--nav-text);
+    outline: none;
+  }
+
+  .navLink.active {
+    color: var(--nav-text);
+  }
+
+  .navLink.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.2rem;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.05));
+  }
+
+  .navToggle {
+    display: none;
+  }
+
+  .navToggle summary {
+    list-style: none;
+    cursor: pointer;
+    color: var(--nav-text);
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    user-select: none;
+  }
+
+  .navToggle summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .navToggle[open] {
+    position: relative;
+  }
+
+  .navToggle[open] .navLinks {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.75rem);
+    background: rgba(11, 18, 32, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 220px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(10px);
+  }
+
+  .navToggle[open] .navLink {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .navToggle {
+      display: block;
+    }
+
+    .navLinks.desktop {
+      display: none;
+    }
+  }
+</style>

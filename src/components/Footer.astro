@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+
+const year = new Date().getFullYear();
+
+const noDumpingImg =
+  'https://images.prismic.io/alexprieu/ee1dac01-a91c-4f52-89eb-200412947ce9_Screenshot_2022-04-07_160753_j9z51b+%281%29.png?auto=compress,format';
+---
+
+<footer class="footer">
+  <div class="container footerContentWrapper">
+    <div class="contact">
+      <span class="org">Tennessee Moving Waters Guide Service</span>
+      <div>125 Sunnymeade Dr, Mt. Juliet, TN 37122</div>
+      <div>E-mail: <a href="mailto:Tnmovingwaters@gmail.com">Tnmovingwaters@gmail.com</a></div>
+      <div>Phone: <a href="tel:+16155062951">(615) 506-2951</a></div>
+      <div class="copyright">&copy; {year} Tennessee Moving Waters Guide Service. All rights reserved.</div>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/tnmovingwaters/" aria-label="Add us on Instagram">Instagram</a>
+      <a href="https://www.facebook.com/tnmovingwatersguideservice/" aria-label="Add us on facebook">Facebook</a>
+      <a
+        href="https://www.youtube.com/channel/UCr3wIjfwL74OWshmIRkfevg"
+        aria-label="Subscribe to our youtube channel"
+      >
+        YouTube
+      </a>
+    </div>
+  </div>
+  <div class="container footerContentWrapper">
+    <div class="heroImage">
+      <Image src={noDumpingImg} alt="No Dumping Sign" width={853} height={166} format="webp" loading="lazy" decoding="async" />
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    width: 100%;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .noDumping {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+  }
+
+  .footerContentWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    align-items: flex-end;
+  }
+
+  .org {
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer a:hover {
+    color: var(--color-forest-2);
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1em;
+    padding: 0.5em;
+  }
+
+  .copyright {
+    margin-top: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  @media screen and (max-width: 530px) {
+    .footer {
+      padding: 2rem 0;
+    }
+
+    .footerContentWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+
+    .links {
+      justify-content: flex-start;
+      padding: 0;
+    }
+  }
+</style>

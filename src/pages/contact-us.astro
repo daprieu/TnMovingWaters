@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const heroImage =
+  'https://images.prismic.io/alexprieu/4164ab77-52ea-4ec0-93c9-810db26090f2_20200428_210805_ewhmi4.jpg?auto=compress,format';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Contact Tennessee Moving Waters for expert fishing guide services in Nashville and beyond. Reach out to learn more or ask any questions about our fishing adventures."
+>
+  <Hero
+    eyebrow="Get in touch"
+    title="Contact"
+    lead="Dates, species, and your ideal day on the water. Send the details and we'll get back to you."
+    imageSrc={heroImage}
+    imageAlt="River scenery"
+    primaryCta={{ href: '/fishing-trip-options', label: 'Trip Options', variant: 'ghost' }}
+    secondaryCta={{ href: '/guides', label: 'Meet the Guides', variant: 'ghost' }}
+    stats={['Fast response', 'Local recommendations', 'Trophy-focused trips']}
+  />
+
+  <section class="section">
+    <div class="container contact">
+      <h2 class="pageTitle">Contact Us</h2>
+      <div class="intro">
+        <p>Thank you for visiting our website.</p>
+        <p>Please contact us to request more information about trip options or to provide feedback about our website.</p>
+      </div>
+
+      <div class="contactInfo">
+        <div>
+          <strong>Mailing Address:</strong>
+          <div>125 Sunnymeade Dr</div>
+          <div>Mt. Juliet, TN 37122</div>
+        </div>
+        <div>
+          <strong>Office Number:</strong>
+          <div><a href="tel:+16155062951">615-506-2951</a></div>
+        </div>
+        <div>
+          <strong>Email:</strong>
+          <div><a href="mailto:Tnmovingwaters@gmail.com">Tnmovingwaters@gmail.com</a> <span>or use the form below.</span></div>
+        </div>
+      </div>
+
+      <form class="form card" action="https://formspree.io/f/xeqnrjee" method="POST">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Name" required />
+        </label>
+
+        <label>
+          <span>Phone Number</span>
+          <input type="tel" name="phoneNumber" placeholder="Phone Number" />
+        </label>
+
+        <label>
+          <span>Email address</span>
+          <input type="email" name="email" placeholder="Email" required />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" placeholder="Message" required></textarea>
+        </label>
+
+        <div class="formButton">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .pageTitle {
+    font-size: var(--step-2);
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contactInfo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    text-align: left;
+    padding: 1rem 0 0.5rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .contactInfo a {
+    color: inherit;
+  }
+
+  .form {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.78);
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  input,
+  textarea {
+    border-radius: 12px;
+    border: 1px solid rgba(11, 18, 32, 0.18);
+    padding: 0.75rem 0.85rem;
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  textarea {
+    grid-column: 1 / -1;
+  }
+
+  .formButton {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 1 / -1;
+  }
+
+  button {
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1.1rem;
+    background: linear-gradient(135deg, var(--color-river), var(--color-forest-2));
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-1);
+  }
+
+  button:hover {
+    filter: brightness(1.05);
+  }
+
+  @media (max-width: 900px) {
+    .contactInfo {
+      grid-template-columns: 1fr;
+    }
+
+    .form {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
