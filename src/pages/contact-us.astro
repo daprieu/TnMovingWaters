@@ -46,6 +46,11 @@ const heroImage =
       </div>
 
       <form class="form card" action="https://formspree.io/f/xeqnrjee" method="POST">
+        <label class="honeypot" aria-hidden="true">
+          <span>Leave this field empty</span>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+        </label>
+
         <label>
           <span>Name</span>
           <input type="text" name="name" placeholder="Name" required />
@@ -119,6 +124,14 @@ const heroImage =
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+  }
+
+  .honeypot {
+    position: absolute;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 
   input,
